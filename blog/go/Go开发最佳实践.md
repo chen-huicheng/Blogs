@@ -86,3 +86,93 @@ func fun()error{
     - 方法/函数需要修改对象/参数时
     - 传递大的数据时
 
+## 匿名函数
+
+匿名函数捕获外部变量时使用的引用类型，而不是值类型。**警告：捕获迭代变量**，在捕获迭代变量时，捕获的时该迭代变量，而不是某个时刻该迭代变量的值。
+
+样例如下所示：
+
+```go
+//正确
+var rmdirs []func()
+for _, d := range tempDirs() {
+    dir := d // NOTE: necessary!
+    os.MkdirAll(dir, 0755) // creates parent directories too
+    rmdirs = append(rmdirs, func() {
+        os.RemoveAll(dir)
+    })
+}
+// ...do some work…
+for _, rmdir := range rmdirs {
+    rmdir() // clean up
+}
+//错误
+var rmdirs []func()
+for _, dir := range tempDirs() {
+    os.MkdirAll(dir, 0755)
+    rmdirs = append(rmdirs, func() {
+      //dir是for作用域变量，rmdirs中所用 func() 类型的函数均捕获该变量，在for执行结束时，dir为tempDirs最后一个元素，执行rmdir()时，仅删除最有一个文件夹。
+        os.RemoveAll(dir) // NOTE: incorrect!
+    })
+}
+```
+
+## deferred函数
+
+```go
+
+package main
+import (
+	"log"
+	"time"
+)
+//!+main
+func bigSlowOperation() {
+    // defer 仅将最后一级函数作为函数结束时执行的函数，其余函数作为表达式直接执行。
+    // 如下所示：多级函数（函数的返回结果是一个返回函数的函数）前两级直接执行
+	defer trace("bigSlowOperation")()() // don't forget the extra parentheses
+	// ...lots of work...
+	time.Sleep(10 * time.Second) // simulate slow operation by sleeping
+}
+func trace(msg string) func() func() {
+  
+	start := time.Now()
+	log.Printf("enter %s (%s)", msg, start)
+	process := func() func() {
+		log.Println("test defer")
+		return func() { log.Printf("exit %s (%s)", msg, time.Since(start)) }
+	}
+	return process
+}
+func main() {
+	bigSlowOperation()
+}
+
+
+/*
+defer trace("bigSlowOperation")()()
+!+output
+2022/09/02 11:36:46 enter bigSlowOperation (2022-09-02 11:36:46.959925 +0800 CST m=+0.000141764)
+2022/09/02 11:36:46 test defer
+2022/09/02 11:36:56 exit bigSlowOperation (10.000647126s)
+!-output
+*/
+// 修改 defer trace("bigSlowOperation")()() 为 defer trace("bigSlowOperation")() 执行结果如下：
+/* 
+!+output
+2022/09/02 11:52:36 enter bigSlowOperation (2022-09-02 11:52:36.534406 +0800 CST m=+0.000128712)
+2022/09/02 11:52:46 test defer
+!-output
+最后一级函数不执行
+*/
+
+```
+
+
+
+```
+
+```
+
++   
+    +   kkd

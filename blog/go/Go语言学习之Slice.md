@@ -19,3 +19,9 @@ append()
 
 
 ## Slice陷阱
+
+
+
+与空对比
+
+tojson 时  
