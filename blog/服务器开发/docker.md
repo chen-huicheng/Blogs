@@ -31,7 +31,7 @@
 
 假设有一台机器，16G内存，需要部署三个应用，那么使用虚拟机技术可以这样划分：
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=N2JiMzRkYzU2ZTkyMDcxYmY3ODI1MmFhZjZlYzUyMzhfa1RIUDJIczc0MVJHVUw0VVRwRzE2NmE1eThtdmtMdVRfVG9rZW46Ym94Y25GdkIzVWVwa3p2SmtGMkFkWmNRNFliXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292044850)
 
 在这台机器上开启三个虚拟机，每个虚拟机上部署一个应用，其中应用分别占用1G、2G和4G内存，同时虚拟机本身却占用了4G、3G和2G内存。
 
@@ -59,7 +59,7 @@ Docker容器具有以下三大特点：
 
 ### 容器VS虚拟机
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=MTVhMjZmM2M0NDljZDFhZmQ3YmY0NzE1OWFhMDcyYTVfdU1oSHZMQ2NycVJnajVPeFo4SWJLdlRqUDBuRmdtNWFfVG9rZW46Ym94Y253cHZnTmIyaUY0ZVFPR3BqVVd2a2hlXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292044739.(null))
 
 | **特性**   | **容器**           | **虚拟机**  |
 | ---------- | ------------------ | ----------- |
@@ -82,7 +82,7 @@ Docker容器具有以下三大特点：
 
 **镜像（**`Image`**）和容器（**`Container`**）的关系，就像是面向对象程序设计中的** **`类`** **和** **`实例`** **一样，镜像是静态的定义，容器是镜像运行时的实体。**
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=MDNkMmMzNjA2M2Y0ZTYxZDYzYmZkMzkxNjc3N2MyZWJfTzRiQll5U2Q0dnM5cTgzbjBOU3FRQk9vTjBCem8wOUpfVG9rZW46Ym94Y25WT251N3lmWnlxQm93enRBcXI2clFnXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292044457.(null))
 
 ### Docker引擎
 
@@ -92,7 +92,7 @@ Docker容器的运行逻辑如下图所示，Docker使用客户端/服务器 (C/
 
 三者的关系大致如下图：
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=OWM5ZjA3ODhiMzM5ZjZhNjYzMTM5MzU1NzNjYTRiZTNfY0FXbVFMeTkyM2JzWnlIbnQ4TTFTRjRpZDVSWks0RDNfVG9rZW46Ym94Y240Yjllc2tEbXptTG1ZSkloWnI4NmJlXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292045116.(null))
 
 客户端和服务端既可以运行在一个机器上，也可通过 `socket` 或者 `RESTful API` 来进行通信。
 
@@ -120,11 +120,11 @@ OCI（Open Container Initiative）规范是事实上的容器标准，已经被�
 
 镜像是一个多层结构。如果指令向镜像中增添、修改文件或程序，则会新建一个镜像层，添加配置信息不会新建镜像层。
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjJkMTUxMDVjNzg3YzFlNGMxZmY4YzRiZTVjMWU1YmFfcjVadEsxQ2NsQXRrSkdQblF0cXczV003RTdNUG82bXhfVG9rZW46Ym94Y25ONUFjVG5PWDZnQ3lZdGF5NlJvMWNjXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292045869.(null))
 
 容器引擎还启动**容器运行时：**
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=MjJlYmE4MDg1OWRlMjU1ZGNiN2YyZjA5NWYzMDBiZDRfcnlXQ0dDZ2sxQVJxelg2ajRoeUVQekI0bE9OMWZMMVRfVG9rZW46Ym94Y242bURMSkVBZFhDQUR5V0dNN1U5NFVkXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292045644.png)
 
 **docker** **容器镜像包含以下两部分内容**：
 
@@ -151,13 +151,13 @@ Linux Namespace 实现视图的隔离，Linux Cgroups 实现资源的隔离与�
 
 容器内
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=YmZhMmI1NGE4YjkyNjBlZTNlM2RjNTA1ZTc4Y2M0MzBfRjR3d1BkOXdUOUttVHR3NUFYa3NuVVo3Y2xCOGRwQkdfVG9rZW46Ym94Y25NTWZQSm5qUmlSbmFBcUtTYmV3Q0pjXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292047553.(null))
 
 宿主机
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=ODljMDBmYjdiNjVkMGZkYjQxMzRkYjQ1MDI0ZjUwMzdfNG1RdWxWQnBSSzBnS3VseFBwdXJWMTVrQ0FsUmdEQWhfVG9rZW46Ym94Y24zRHFCZ2NKNTdReUlVS2wybGx5UkhkXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292047041.(null))
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=NWUzMjIxMDVkOGM4NzFjMzUxN2U3NTRlN2FkMzk2ODJfWlhZYUxPVHdWQ2ZZS1NhVVY0VmRkU1Q0WUlDOE1LSDdfVG9rZW46Ym94Y243Wmh1Zm1teTk5a0tIcVRkTFRhcEx4XzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292046000.(null))
 
 https://tinylab.org/pid-namespace/
 
@@ -196,7 +196,7 @@ Linux Cgroups实现资源的限制，每个容器进程消耗的资源（内存�
 
 联合文件系统（Union File System）也叫 UnionFS，主要的功能是将多个不同位置的目录联合挂载（union mount）到同一个目录下。
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=N2I4MzJiMTQ4NzVlNDBhMGVkNmZjNmY4Mjk3MzA0MjRfOFRhR2NVbHdsRHVPRkszcmF5N29OV0t6N0FueWFlWXFfVG9rZW46Ym94Y241RTZ0TEphdVF5M1NFQkp3bHR4WUtDXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292048258.(null))
 
 提供文件系统的隔离
 
@@ -250,7 +250,7 @@ Linux Cgroups实现资源的限制，每个容器进程消耗的资源（内存�
 4.  推送镜像到镜像仓库。
 5.  拉取镜像并运行。
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY4M2NiNzNkYTU3YjQzM2MzMGJhNjYyOTFmMmFkZDhfb2FRNzljSmpPZFVRS3d0R1ZHclJMbHJ6Uk1Ccmo1UGZfVG9rZW46Ym94Y25peE1KbVU0R2R3Nm1GVlhaRjJMekxiXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292046700.(null))
 
 Step1：编写应用代码 main.go
 
@@ -333,7 +333,7 @@ docker run -d -p 2345:80 chenhuicheng/http:1.0.0
 
 访问容器内服务：`ip:hostPort`
 
-![img](https://bytedance.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGYzYmM4OTcyNTdhMDQ4MDViMzk5NDYwYWIxZTVmN2RfY2lwYVN2NTZEdUlCa1Y3T2xkOVN4T0hGejFMTFljZ1VfVG9rZW46Ym94Y25MTW1CQVlHdFpnbjJGZkU5WVU0RHhlXzE2NzUwNjQ4NjU6MTY3NTA2ODQ2NV9WNA)
+![img](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202306292046207.(null))
 
 ## 参考文献：
 
