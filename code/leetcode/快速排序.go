@@ -1,5 +1,9 @@
 package main
 
+import (
+	"math/rand"
+)
+
 func quickSort(arr []int) {
 	_quickSort(arr, 0, len(arr)-1)
 }
@@ -11,18 +15,24 @@ func _quickSort(arr []int, l, r int) {
 	}
 }
 func partition(arr []int, l, r int) int {
-	v := arr[l]
+	p := rand.Intn(r-l+1) + l // 随机位置
+	arr[l], arr[p] = arr[p], arr[l]
 	for l < r {
-		for l < r && arr[r] > v {
+		for l < r && arr[l] < arr[r] { // 交换支点位置 arr所有值都一样的情况下 l r 趋近于中间
 			r--
 		}
-		arr[l] = arr[r]
-		for l < r && arr[l] <= v {
+		if l < r {
+			arr[l], arr[r] = arr[r], arr[l]
 			l++
 		}
-		arr[r] = arr[l]
+		for l < r && arr[l] < arr[r] {
+			l++
+		}
+		if l < r {
+			arr[l], arr[r] = arr[r], arr[l]
+			r--
+		}
 	}
-	arr[l] = v
 	return l
 }
 

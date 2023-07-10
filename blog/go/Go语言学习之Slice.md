@@ -1,4 +1,4 @@
-# Go语言学习之Slice（*）
+# Go语言学习之Slice
 
 ## slice
 
