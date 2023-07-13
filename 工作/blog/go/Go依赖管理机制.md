@@ -14,7 +14,7 @@
 
 所有项目代码都直接依赖 src 下的代码
 
-![202301301942255](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101039337.png?token=AIBQIFBGAFD4SBZL5X5GXZDEVNX2E)
+![202301301942255](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307101254404.png)
 
 **弊端：**无法实现两个项目依赖同一个 package 的不同版本
 

@@ -31,7 +31,7 @@
 
 假设有一台机器，16G内存，需要部署三个应用，那么使用虚拟机技术可以这样划分： 
 
-![1280X1280](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101055552.PNG?token=AIBQIFEGTTHKAIMJZYVPW3TEVNZXU)
+![1280X1280](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122346772.png)
 
 在这台机器上开启三个虚拟机，每个虚拟机上部署一个应用，其中应用分别占用1G、2G和4G内存，同时虚拟机本身却占用了4G、3G和2G内存。
 
@@ -59,7 +59,7 @@ Docker容器具有以下三大特点：
 
 ### 容器VS虚拟机
 
-![1280X1280 (1)](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101057527.PNG?token=AIBQIFARIDKA64XF7AIQCRTEVNZ5S)
+![1280X1280 (1)](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122347275.png)
 
 | **特性**   | **容器**           | **虚拟机**  |
 | ---------- | ------------------ | ----------- |
@@ -82,7 +82,7 @@ Docker容器具有以下三大特点：
 
 **镜像（**`Image`**）和容器（**`Container`**）的关系，就像是面向对象程序设计中的** **`类`** **和** **`实例`** **一样，镜像是静态的定义，容器是镜像运行时的实体。**
 
-![6f5add87-9eb0-4434-aa59-3e77c129cf9f](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101059465.png?token=AIBQIFEJS5GB3F7VGQUWMSTEVN2GU)
+![6f5add87-9eb0-4434-aa59-3e77c129cf9f](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122347739.png)
 
 ### Docker引擎
 
@@ -92,7 +92,7 @@ Docker容器的运行逻辑如下图所示，Docker使用客户端/服务器 (C/
 
 三者的关系大致如下图：
 
-![181fb120-da1b-4dc7-ba89-1b6a08e09489](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101102695.png?token=AIBQIFDNJ4JYHSR6IPZ4YZTEVN2RY)
+![181fb120-da1b-4dc7-ba89-1b6a08e09489](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122347318.png)
 
 客户端和服务端既可以运行在一个机器上，也可通过 `socket` 或者 `RESTful API` 来进行通信。
 
@@ -120,11 +120,11 @@ OCI（Open Container Initiative）规范是事实上的容器标准，已经被�
 
 镜像是一个多层结构。如果指令向镜像中增添、修改文件或程序，则会新建一个镜像层，添加配置信息不会新建镜像层。
 
-![b2169723-ed48-45f0-938c-ebeaf1614b49](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101103603.png?token=AIBQIFCLVMWMUUC5NWNY4ULEVN2TO)
+![b2169723-ed48-45f0-938c-ebeaf1614b49](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122347952.png)
 
 容器引擎还启动**容器运行时：**
 
-![194e81b1-efde-49fd-969c-a649d4ce66ec](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101103876.png?token=AIBQIFHGAZ2KESFJIYDZCJTEVN2UO)
+![194e81b1-efde-49fd-969c-a649d4ce66ec](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122347815.png)
 
 **docker** **容器镜像包含以下两部分内容**：
 
@@ -149,13 +149,13 @@ Linux Namespace 实现视图的隔离，Linux Cgroups 实现资源的隔离与�
 
 例如，“PID”命名空间使容器化进程只能看到该容器内的其他进程，但看不到共享主机上其他容器的进程。
 
-容器内![ee1a401b-29c2-4e89-b1e6-7d704c67a248](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101105452.png?token=AIBQIFHPIPGCFF2ISOYWPWTEVN24I)
+容器内![ee1a401b-29c2-4e89-b1e6-7d704c67a248](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122347812.png)
 
 宿主机
 
-![5e0ae7d8-03a0-45ac-8105-79d7d7b59204](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101104152.png?token=AIBQIFEIBM4DERN3QM3Q27TEVN2WG)
+![5e0ae7d8-03a0-45ac-8105-79d7d7b59204](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122347705.png)
 
-![2169d5d7-b47d-4688-8764-e8fa2211cd23](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101104863.png?token=AIBQIFFKYVG44TPQCR5NJVDEVN2YM)
+![2169d5d7-b47d-4688-8764-e8fa2211cd23](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122347236.png)
 
 https://tinylab.org/pid-namespace/
 
@@ -194,7 +194,7 @@ Linux Cgroups实现资源的限制，每个容器进程消耗的资源（内存�
 
 联合文件系统（Union File System）也叫 UnionFS，主要的功能是将多个不同位置的目录联合挂载（union mount）到同一个目录下。
 
-![c55877c1-e589-445c-8dc1-2d945acffe6e](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101104525.png?token=AIBQIFBPYC4KUCHYZ26MXYTEVN2ZS)
+![c55877c1-e589-445c-8dc1-2d945acffe6e](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122348642.png)
 
 提供文件系统的隔离
 
@@ -248,7 +248,7 @@ Linux Cgroups实现资源的限制，每个容器进程消耗的资源（内存�
 4.  推送镜像到镜像仓库。
 5.  拉取镜像并运行。
 
-![62f394d7-5c93-4bee-96b8-ce3d8af3dea5](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101105963.png?token=AIBQIFDWRJ5FSGSHOHEWLELEVN22S)Step1：编写应用代码 main.go
+![62f394d7-5c93-4bee-96b8-ce3d8af3dea5](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122348394.png)Step1：编写应用代码 main.go
 
 ```Go
 package main
@@ -329,7 +329,7 @@ docker run -d -p 2345:80 chenhuicheng/http:1.0.0
 
 访问容器内服务：`ip:hostPort`
 
-![3d87a5bf-d1e4-4d63-97dd-5acd07ea159f](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101105255.png?token=AIBQIFGLLBP3A5TFRRL3UQTEVN23W)
+![3d87a5bf-d1e4-4d63-97dd-5acd07ea159f](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307122348762.png)
 
 ## 参考文献：
 

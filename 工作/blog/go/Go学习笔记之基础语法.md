@@ -4,7 +4,7 @@
 
 https://go.dev/doc/install
 
-网站会根据系统自动识别应该下载的安装包，下载对应的安装包，点击安装即可。在终端输入`go version` 输出 go 版本号代表安装成功，不生效重启终端试试。![image-20220907220203682](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101038431.png?token=AIBQIFGZCAT4DPXMEAKMD4LEVNXVA)
+网站会根据系统自动识别应该下载的安装包，下载对应的安装包，点击安装即可。在终端输入`go version` 输出 go 版本号代表安装成功，不生效重启终端试试。![image-20220907220203682](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307101250560.png)
 
 ### 源码安装方式
 
@@ -17,7 +17,7 @@ https://go.dev/doc/install
      wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
      ```
 
-     ![image-20220907221237783](https://raw.githubusercontent.com/chen-huicheng/Blogs/master/img/202307101038870.png?token=AIBQIFDCHNRKGMQMDQHKLXLEVNXXG)
+     ![image-20220907221237783](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307101251426.png)
 
 2.   安装
 

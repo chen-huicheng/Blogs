@@ -211,7 +211,7 @@ sudo chmod 555  /home/ftp
 sudo vim /etc/vsftpd.chroot_list
 ```
 
-![img](https://img-blog.csdnimg.cn/034e253a5c2b4e3f914a6a093e675616.png)
+![img](https://raw.githubusercontent.com/chen-huicheng/ImageHub/main/typora_img/202307101254280.png)
 
 ##  4.重启ftp服务
 
