@@ -45,3 +45,25 @@ func mergeKLists(lists []*ListNode) *ListNode {
 	nextPtr.Next = nil
 	return head.Next
 }
+func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+	var h ListNode
+	n := &h
+	p, q := list1, list2
+	for p != nil && q != nil {
+		if p.Val <= q.Val {
+			n.Next = p
+			p = p.Next
+		} else {
+			n.Next = q
+			q = q.Next
+		}
+		n = n.Next
+	}
+	if p != nil {
+		n.Next = p
+	}
+	if q != nil {
+		n.Next = q
+	}
+	return h.Next
+}
