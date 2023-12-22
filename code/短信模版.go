@@ -8,6 +8,7 @@ import (
 func main() {
 	TestSetValTemplate()
 }
+
 func TestSetValTemplate() {
 	tpl := "您好！您有一份来自${enterprise}的签署文件：https://xxx.net/${sign_url}，请于收到短信后的48小时内点击以上链接完成相关合同签署。"
 	params := map[string]string{"enterprise": "字节跳动", "sign_url": "xSlj"}
